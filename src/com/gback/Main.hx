@@ -34,6 +34,7 @@ class Main extends Sprite
 		//addChild(square);
 		var world:World = new World();
 		addChild(world);
+		
 	}
 	
 	static public function main() 
