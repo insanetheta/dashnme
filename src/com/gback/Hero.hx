@@ -3,13 +3,14 @@ package com.gback;
 import nme.display.Sprite;
 import nme.Assets;
 import nme.ui.Keyboard;
+import com.gback.IController.Msg;
 
 /**
  * ...
  * @author Greg
  */
 
-class Hero 
+class Hero implements IController
 {
 	var world:Sprite;
 	var display:Sprite;
@@ -23,9 +24,17 @@ class Hero
 		
 	}
 	
-	public function update():Void
+	public function onUpdate(msg:Msg):Void
 	{
-	
+		
+	}
+	public function onSetup(entity:Entity):Void
+	{
+		
+	}
+	public function onDestroy():Void
+	{
+		
 	}
 	
 }
