@@ -20,8 +20,10 @@
 	<icon path="assets/nme.svg" />
 	<assets path="assets/img" rename="img" />
 	<assets path="assets/swf/dashassets.swf" />
+	<assets path="assets/swf/flowers.swf" />
 	
 	<library path="assets/swf/dashassets.swf" />
+	<library path="assets/swf/flowers.swf" />
 	
 	<!-- DLLs -->
 	<ndll name="std" />
@@ -32,5 +34,7 @@
 	<!-- optimize JS output -->
 	<haxeflag name="--dead-code-elimination" if="html5" />
 	<haxeflag name="--js-modern" if="html5" />
+	
+	<haxedef name="fdb" if="target_flash" />
 	
 </project>

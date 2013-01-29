@@ -1,5 +1,6 @@
 package com.gback;
 import nme.display.Sprite;
+import nme.display.Stage;
 import nme.events.KeyboardEvent;
 import nme.ui.Keyboard;
 
@@ -10,10 +11,10 @@ import nme.ui.Keyboard;
 
 class KeyboardInput 
 {
-	var gameWorld:Sprite;
+	var gameWorld:Stage;
 	var keyStates:IntHash<Bool>;
 
-	public function new(worldDisplay:Sprite) 
+	public function new(worldDisplay:Stage) 
 	{
 		gameWorld = worldDisplay;
 		keyStates = new IntHash<Bool>();
@@ -24,6 +25,7 @@ class KeyboardInput
 	function keyDown(keyDownEvent:KeyboardEvent):Void
 	{
 		keyStates.set(keyDownEvent.keyCode, true);
+		trace("key down: " + keyDownEvent.keyCode);
 	}
 	
 	function keyUp(keyUpEvent:KeyboardEvent):Void
