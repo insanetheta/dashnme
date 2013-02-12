@@ -69,7 +69,7 @@ class InputCtrl implements IController
 	public function onSetup(entity:Entity):Void
 	{
 		this.entity = entity;
-		//entityPosition = cast(entity.getState("Position"),PositionState);
+		entityPosition = cast(entity.getState("Position"),PositionState);
 		if (entityPosition == null) 
 		{
 			entityPosition = new PositionState();
